@@ -1,0 +1,272 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --main-color: #fe5b3d;
+    --secondary-color: #ffac38;
+    --text-color: #444;
+    --gradient: linear-gradient(#fe5b3d, #ffac38);
+    --upsidowngradient: linear-gradient(#ffac38, #fe5b3d);
+    --buttonCL: #474fa0;
+}
+
+/* Custome scroll bar */
+
+html::-webkit-scrollbar {
+    width: 0.6rem;
+}
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+html::-webkit-scrollbar-thumb {
+    background: var(--upsidowngradient);
+    border-radius: 6rem;
+}
+/*End Custome scroll bar */
+
+.rform {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 750px;
+    max-height: 100vh;
+    background: rgba(238, 238, 238, 0.753);
+    backdrop-filter: blur(4px);
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 0px 0px 39px #44444452;
+}
+
+.rtitle {
+    font-size: 30px;
+    color: var(--main-color);
+    font-weight: 600;
+    letter-spacing: -1px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+}
+
+.rtitle::before,
+.rtitle::after {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    left: 0px;
+    background-color: var(--main-color);
+}
+
+.rtitle::before {
+    width: 18px;
+    height: 18px;
+    background-color: var(--main-color);
+}
+
+.rtitle::after {
+    width: 18px;
+    height: 18px;
+    animation: pulse 1s linear infinite;
+}
+
+.rinput {
+    width: 100%;
+    padding: 10px 10px 20px 10px;
+    outline: 0;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-radius: 10px;
+}
+
+.form .label {
+    font-size: 1.8rem;
+}
+.registrationForm {
+    background: var(--gradient);
+    /* height: 100vh; */
+}
+.registrationForm .rmessage {
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+.Registration {
+    background: var(--secondary-color);
+    /* height: 50vh; */
+}
+.rflex {
+    display: flex;
+    width: 100%;
+    gap: 6px;
+}
+.rsubmit {
+    border: none;
+    outline: none;
+    background-color: var(--secondary-color);
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    transform: 0.3s ease;
+    transition: 0.5s ease;
+}
+
+.rsubmit:hover {
+    background-color: var(--main-color);
+}
+.rhsubmit {
+    border: none;
+    outline: none;
+    background-color: var(--main-color);
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    transform: 0.3s ease;
+    transition: 0.5s ease;
+    margin-right: 12px;
+    margin-top: 12px;
+}
+.rhsubmit:hover {
+    background: var(--secondary-color);
+}
+.rhcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.regform {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: var(--main-color); */
+    height: 1000px;
+    width: 100%;
+    background-image: url("/img/about.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 65rem;
+}
+
+.rsignin {
+    text-align: center;
+    color: var(--text-color);
+}
+.rsignin a {
+    color: var(--secondary-color);
+    text-decoration: underline;
+    transition: 0.5s ease;
+}
+.rsignin a:hover {
+    color: var(--main-color);
+}
+
+.rheading {
+    color: rgb(238, 238, 238);
+    font-size: 3vmax;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 25px;
+    text-shadow: 0px 0px 5px #44444485;
+}
+.rheading h1 {
+    position: relative;
+}
+.logonname img {
+    width: 20%;
+}
+.footer {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: auto;
+}
+.footer .copyright {
+    color: var(--text-color);
+    margin-left: 12px;
+}
+.footer .social i {
+    font-size: 12px;
+    padding: 0px 20px;
+    color: var(--text-color);
+}
+.footer .social i:hover {
+    color: var(--main-color);
+}
+.rememberMe {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.inputWithIcon {
+    position: relative;
+}
+.toggle-Pass {
+    position: absolute;
+    top: 50%;
+    right: 10px; /* Adjust the position of the eye icon */
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.toggle-PassL {
+    right: 10px;
+}
+.inputWithIconL {
+    /* display: flex; */
+    align-items: center;
+}
+.forgotPass a {
+    color: var(--main-color);
+    font-weight: 500;
+    text-decoration: underline;
+    transition: 0.5s ease;
+}
+.forgotPass a:hover {
+    color: red;
+}
+@keyframes pulse {
+    from {
+        transform: scale(0.9);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(1.8);
+        opacity: 0;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .regform {
+        background-size: 100% auto; /* Adjust background size for smaller screens if needed */
+        padding: 20px;
+    }
+}
+
+@media (max-width: 568px) {
+    .footer .copyright {
+        flex-direction: column;
+    }
+    .footer .social i {
+        font-size: 20px;
+        display: flex;
+        padding: 5px;
+        flex-direction: row;
+    }
+    .footer {
+        height: 16vh;
+    }
+}
